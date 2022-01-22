@@ -60,10 +60,6 @@ public class ItemBuilder {
         ItemMeta itemMeta = itemStack.getItemMeta();
 
         assert itemMeta != null;
-        itemMeta.setDisplayName(name);
-        itemMeta.setLore(lore);
-        itemMeta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
-        itemStack.addEnchantments(enchantments);
 
         // axolotl bucket
         if (this instanceof AxolotlBucket) {
@@ -220,6 +216,11 @@ public class ItemBuilder {
             meta.setPatternColor(item.getPatternColor());
             meta.setBodyColor(item.getBodyColor());
         }
+
+        itemMeta.setDisplayName(name);
+        itemMeta.setLore(lore);
+        itemMeta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
+        itemStack.addEnchantments(enchantments);
 
         return itemStack;
     }
