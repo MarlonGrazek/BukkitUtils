@@ -203,8 +203,8 @@ public class ItemBuilder {
         itemMeta.setDisplayName(name);
         itemMeta.setLore(lore);
         itemMeta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
-        itemStack.addEnchantments(enchantments);
         itemStack.setItemMeta(itemMeta);
+        itemStack.addEnchantments(enchantments);
 
         return itemStack;
     }
