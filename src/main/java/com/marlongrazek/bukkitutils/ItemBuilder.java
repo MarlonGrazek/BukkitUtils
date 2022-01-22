@@ -286,6 +286,19 @@ public class ItemBuilder {
         public AxolotlBucket() {
         }
 
+        public AxolotlBucket(String name) {
+            super.setName(name);
+        }
+
+        public AxolotlBucket(Material material) {
+            super.setMaterial(material);
+        }
+
+        public AxolotlBucket(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public AxolotlBucket(ItemStack itemStack) {
             AxolotlBucketMeta meta = (AxolotlBucketMeta) itemStack.getItemMeta();
             assert meta != null;
@@ -306,6 +319,19 @@ public class ItemBuilder {
         private List<Pattern> patterns = new ArrayList<>();
 
         public Banner() {
+        }
+
+        public Banner(String name) {
+            super.setName(name);
+        }
+
+        public Banner(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Banner(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public Banner(ItemStack itemStack) {
@@ -351,6 +377,19 @@ public class ItemBuilder {
         private List<String> pages = new ArrayList<>();
 
         public Book() {
+        }
+
+        public Book(String name) {
+            super.setName(name);
+        }
+
+        public Book(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Book(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public Book(ItemStack itemStack) {
@@ -438,6 +477,19 @@ public class ItemBuilder {
         public Bundle() {
         }
 
+        public Bundle(String name) {
+            super.setName(name);
+        }
+
+        public Bundle(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Bundle(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public Bundle(ItemStack itemStack) {
             BundleMeta meta = (BundleMeta) itemStack.getItemMeta();
             assert meta != null;
@@ -467,6 +519,19 @@ public class ItemBuilder {
         private boolean tracked;
 
         public Compass() {
+        }
+
+        public Compass(String name) {
+            super.setName(name);
+        }
+
+        public Compass(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Compass(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public Compass(ItemStack itemStack) {
@@ -504,6 +569,19 @@ public class ItemBuilder {
         public Crossbow() {
         }
 
+        public Crossbow(String name) {
+            super.setName(name);
+        }
+
+        public Crossbow(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Crossbow(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public Crossbow(ItemStack itemStack) {
             CrossbowMeta meta = (CrossbowMeta) itemStack.getItemMeta();
             assert meta != null;
@@ -534,6 +612,19 @@ public class ItemBuilder {
         public Damageable() {
         }
 
+        public Damageable(String name) {
+            super.setName(name);
+        }
+
+        public Damageable(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Damageable(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public Damageable(ItemStack itemStack) {
             org.bukkit.inventory.meta.Damageable meta = (org.bukkit.inventory.meta.Damageable) itemStack.getItemMeta();
             assert meta != null;
@@ -558,6 +649,19 @@ public class ItemBuilder {
         private java.util.Map<Enchantment, Integer> storedEnchantments = new HashMap<>();
 
         public EnchantmentStorage() {
+        }
+
+        public EnchantmentStorage(String name) {
+            super.setName(name);
+        }
+
+        public EnchantmentStorage(Material material) {
+            super.setMaterial(material);
+        }
+
+        public EnchantmentStorage(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public EnchantmentStorage(ItemStack itemStack) {
@@ -602,6 +706,19 @@ public class ItemBuilder {
         public FireworkEffect() {
         }
 
+        public FireworkEffect(String name) {
+            super.setName(name);
+        }
+
+        public FireworkEffect(Material material) {
+            super.setMaterial(material);
+        }
+
+        public FireworkEffect(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public FireworkEffect(ItemStack itemStack) {
             FireworkEffectMeta meta = (FireworkEffectMeta) itemStack.getItemMeta();
             assert meta != null;
@@ -627,6 +744,19 @@ public class ItemBuilder {
         private int power;
 
         public Firework() {
+        }
+
+        public Firework(String name) {
+            super.setName(name);
+        }
+
+        public Firework(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Firework(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public Firework(ItemStack itemStack) {
@@ -684,6 +814,19 @@ public class ItemBuilder {
         public KnowledgeBook() {
         }
 
+        public KnowledgeBook(String name) {
+            super.setName(name);
+        }
+
+        public KnowledgeBook(Material material) {
+            super.setMaterial(material);
+        }
+
+        public KnowledgeBook(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public KnowledgeBook(ItemStack itemStack) {
             KnowledgeBookMeta meta = (KnowledgeBookMeta) itemStack.getItemMeta();
             assert meta != null;
@@ -714,6 +857,19 @@ public class ItemBuilder {
         public LeatherArmor() {
         }
 
+        public LeatherArmor(String name) {
+            super.setName(name);
+        }
+
+        public LeatherArmor(Material material) {
+            super.setMaterial(material);
+        }
+
+        public LeatherArmor(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public LeatherArmor(ItemStack itemStack) {
             LeatherArmorMeta meta = (LeatherArmorMeta) itemStack.getItemMeta();
             assert meta != null;
@@ -737,6 +893,19 @@ public class ItemBuilder {
         private boolean scaling;
 
         public Map() {
+        }
+
+        public Map(String name) {
+            super.setName(name);
+        }
+
+        public Map(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Map(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public Map(ItemStack itemStack) {
@@ -802,6 +971,19 @@ public class ItemBuilder {
         public Potion() {
         }
 
+        public Potion(String name) {
+            super.setName(name);
+        }
+
+        public Potion(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Potion(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public Potion(ItemStack itemStack) {
             PotionMeta potionMeta = (PotionMeta) itemStack.getItemMeta();
             assert potionMeta != null;
@@ -863,6 +1045,19 @@ public class ItemBuilder {
         public Repairable() {
         }
 
+        public Repairable(String name) {
+            super.setName(name);
+        }
+
+        public Repairable(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Repairable(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public Repairable(ItemStack itemStack) {
             org.bukkit.inventory.meta.Repairable repairable = (org.bukkit.inventory.meta.Repairable) itemStack.getItemMeta();
             assert repairable != null;
@@ -889,6 +1084,19 @@ public class ItemBuilder {
         public Skull() {
         }
 
+        public Skull(String name) {
+            super.setName(name);
+        }
+
+        public Skull(Material material) {
+            super.setMaterial(material);
+        }
+
+        public Skull(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
+        }
+
         public Skull(ItemStack itemStack) {
             SkullMeta meta = (SkullMeta) itemStack.getItemMeta();
             assert meta != null;
@@ -913,6 +1121,19 @@ public class ItemBuilder {
         private List<PotionEffect> effects = new ArrayList<>();
 
         public SuspiciousStew() {
+        }
+
+        public SuspiciousStew(String name) {
+            super.setName(name);
+        }
+
+        public SuspiciousStew(Material material) {
+            super.setMaterial(material);
+        }
+
+        public SuspiciousStew(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public SuspiciousStew(ItemStack itemStack) {
@@ -955,6 +1176,19 @@ public class ItemBuilder {
         private boolean hasVariant = false;
 
         public TropicalFishBucket() {
+        }
+
+        public TropicalFishBucket(String name) {
+            super.setName(name);
+        }
+
+        public TropicalFishBucket(Material material) {
+            super.setMaterial(material);
+        }
+
+        public TropicalFishBucket(String name, Material material) {
+            super.setName(name);
+            super.setMaterial(material);
         }
 
         public TropicalFishBucket(ItemStack itemStack) {
