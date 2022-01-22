@@ -13,15 +13,7 @@ public final class BukkitUtils {
     }
 
     public static void addPlayerExperience(Player player, int experience) {
-
-        while (experience >= player.getExpToLevel() - player.getExpToLevel() * player.getExp()) {
-            experience -= player.getExpToLevel() - player.getExpToLevel() * player.getExp();
-            player.setLevel(player.getLevel() + 1);
-            player.setExp(0);
-        }
-
-        float newExp = experience + player.getExp() * player.getExpToLevel();
-        player.setExp(newExp / player.getExpToLevel());
+        player.giveExp(experience);
     }
 
     public static void removePlayerExperience(Player player, int experience) {
