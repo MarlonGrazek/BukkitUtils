@@ -17,7 +17,7 @@ import java.util.*;
 
 public class ItemBuilder {
 
-    private int amount;
+    private int amount = 1;
     private String name;
     private Material material;
     private java.util.Map<Enchantment, Integer> enchantments = new HashMap<>();
