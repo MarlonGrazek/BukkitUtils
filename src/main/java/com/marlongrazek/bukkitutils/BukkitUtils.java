@@ -30,7 +30,10 @@ public final class BukkitUtils {
 
         while (experience > player.getExpToLevel() * player.getExp()) {
             experience -= player.getExpToLevel() * player.getExp();
-            if (player.getLevel() > 0) player.setLevel(player.getLevel() - 1);
+            if (player.getLevel() > 0) {
+                player.setLevel(player.getLevel() - 1);
+                player.setExp(1);
+            }
         }
 
         float newExp = player.getExpToLevel() * player.getExp() - experience;
