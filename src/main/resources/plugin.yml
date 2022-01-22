@@ -1,0 +1,4 @@
+name: BukkitUtils
+version: '${project.version}'
+main: com.marlongrazek.bukkitutils.BukkitUtils
+api-version: 1.18
