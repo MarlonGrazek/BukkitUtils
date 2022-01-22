@@ -24,6 +24,8 @@ public final class BukkitUtils {
 
     public static void removePlayerExperience(Player player, int experience) {
 
+        if(player.getExp() == 0) return;
+
         while (experience > (int) (player.getExpToLevel() * player.getExp())) {
             experience -= (int) (player.getExpToLevel() * player.getExp());
             if(player.getLevel() > 0) player.setLevel(player.getLevel() - 1);
