@@ -61,6 +61,9 @@ public class ItemBuilder {
 
         assert itemMeta != null;
 
+        itemMeta.setDisplayName(name);
+        itemMeta.setLore(lore);
+
         // axolotl bucket
         if (this instanceof AxolotlBucket) {
             AxolotlBucket item = (AxolotlBucket) this;
@@ -200,8 +203,6 @@ public class ItemBuilder {
             meta.setBodyColor(item.getBodyColor());
         }
 
-        itemMeta.setDisplayName(name);
-        itemMeta.setLore(lore);
         itemMeta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
         itemStack.setItemMeta(itemMeta);
         itemStack.addEnchantments(enchantments);
