@@ -62,6 +62,7 @@ public class ItemBuilder {
         assert itemMeta != null;
 
         itemMeta.setDisplayName(name);
+        Bukkit.broadcastMessage(lore.toString());
         itemMeta.setLore(lore);
         itemMeta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
         itemStack.setItemMeta(itemMeta);
@@ -257,7 +258,7 @@ public class ItemBuilder {
         this.lore = lore;
     }
 
-    public void setLoreLines(int index, String line) {
+    public void setLoreLine(int index, String line) {
         this.lore.set(index, line);
     }
 
