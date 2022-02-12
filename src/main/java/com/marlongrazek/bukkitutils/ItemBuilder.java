@@ -217,10 +217,10 @@ public class ItemBuilder {
             meta.setBodyColor(item.getBodyColor());
             itemStack.setItemMeta(meta);
         }
- 
+
         ItemMeta meta = itemStack.getItemMeta();
         meta.setDisplayName(name);
-        meta.setLore(lore);
+        meta.setLore(new ArrayList<>(lore));
         meta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
         itemStack.setItemMeta(meta);
 
