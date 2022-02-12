@@ -63,12 +63,15 @@ public class ItemBuilder {
 
         itemMeta.setDisplayName(name);
         itemMeta.setLore(lore);
+        itemMeta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
+        itemStack.setItemMeta(itemMeta);
 
         // axolotl bucket
         if (this instanceof AxolotlBucket) {
             AxolotlBucket item = (AxolotlBucket) this;
             AxolotlBucketMeta meta = (AxolotlBucketMeta) itemMeta;
             meta.setVariant(item.getVariant());
+            itemStack.setItemMeta(meta);
         }
 
         // banner
@@ -76,6 +79,7 @@ public class ItemBuilder {
             Banner item = (Banner) this;
             BannerMeta meta = (BannerMeta) itemMeta;
             meta.setPatterns(item.getPatterns());
+            itemStack.setItemMeta(meta);
         }
 
         // book
@@ -86,6 +90,7 @@ public class ItemBuilder {
             meta.setTitle(item.getTitle());
             meta.setAuthor(item.getAuthor());
             meta.setGeneration(item.getGeneration());
+            itemStack.setItemMeta(meta);
         }
 
         // bundle
@@ -93,6 +98,7 @@ public class ItemBuilder {
             Bundle item = (Bundle) this;
             BundleMeta meta = (BundleMeta) itemMeta;
             meta.setItems(item.getItems());
+            itemStack.setItemMeta(meta);
         }
 
         // compass
@@ -101,6 +107,7 @@ public class ItemBuilder {
             CompassMeta meta = (CompassMeta) itemMeta;
             meta.setLodestone(item.getLodestone());
             meta.setLodestoneTracked(item.isLodestoneTracked());
+            itemStack.setItemMeta(meta);
         }
 
         // crossbow
@@ -108,6 +115,7 @@ public class ItemBuilder {
             Crossbow item = (Crossbow) this;
             CrossbowMeta meta = (CrossbowMeta) itemMeta;
             meta.setChargedProjectiles(item.getChargedProjectiles());
+            itemStack.setItemMeta(meta);
         }
 
         // damageable
@@ -115,6 +123,7 @@ public class ItemBuilder {
             Damageable item = (Damageable) this;
             org.bukkit.inventory.meta.Damageable meta = (org.bukkit.inventory.meta.Damageable) itemMeta;
             meta.setDamage(item.getDamage());
+            itemStack.setItemMeta(meta);
         }
 
         // stored enchantments
@@ -123,6 +132,7 @@ public class ItemBuilder {
             EnchantmentStorageMeta meta = (EnchantmentStorageMeta) itemMeta;
             item.getStoredEnchants().keySet().forEach(enchantment ->
                     meta.addEnchant(enchantment, item.getStoredEnchantLevel(enchantment), false));
+            itemStack.setItemMeta(meta);
         }
 
         // firework effect
@@ -130,6 +140,7 @@ public class ItemBuilder {
             FireworkEffect item = (FireworkEffect) this;
             FireworkEffectMeta meta = (FireworkEffectMeta) itemMeta;
             meta.setEffect(item.getEffect());
+            itemStack.setItemMeta(meta);
         }
 
         // firework
@@ -138,6 +149,7 @@ public class ItemBuilder {
             FireworkMeta meta = (FireworkMeta) itemMeta;
             meta.setPower(item.getPower());
             meta.addEffects(item.getEffects());
+            itemStack.setItemMeta(meta);
         }
 
         // knowledge book
@@ -145,6 +157,7 @@ public class ItemBuilder {
             KnowledgeBook item = (KnowledgeBook) this;
             KnowledgeBookMeta meta = (KnowledgeBookMeta) itemMeta;
             meta.setRecipes(item.getRecipes());
+            itemStack.setItemMeta(meta);
         }
 
         // leather armor
@@ -152,6 +165,7 @@ public class ItemBuilder {
             LeatherArmor item = (LeatherArmor) this;
             LeatherArmorMeta meta = (LeatherArmorMeta) itemMeta;
             meta.setColor(item.getColor());
+            itemStack.setItemMeta(meta);
         }
 
         // map
@@ -162,6 +176,7 @@ public class ItemBuilder {
             meta.setLocationName(item.getLocationName());
             meta.setMapView(item.getMapView());
             meta.setScaling(item.isScaling());
+            itemStack.setItemMeta(meta);
         }
 
         // potion
@@ -171,41 +186,44 @@ public class ItemBuilder {
             meta.setBasePotionData(item.getBasePotionData());
             item.getCustomEffects().forEach(effect -> meta.addCustomEffect(effect, false));
             meta.setColor(item.getColor());
+            itemStack.setItemMeta(meta);
         }
 
         // repairable
-        else if(this instanceof Repairable) {
+        else if (this instanceof Repairable) {
             Repairable item = (Repairable) this;
             org.bukkit.inventory.meta.Repairable meta = (org.bukkit.inventory.meta.Repairable) itemMeta;
             meta.setRepairCost(item.getRepairCost());
+            itemStack.setItemMeta(meta);
         }
 
         // skull
-        else if(this instanceof Skull) {
+        else if (this instanceof Skull) {
             Skull item = (Skull) this;
             SkullMeta meta = (SkullMeta) itemMeta;
             meta.setOwningPlayer(item.getOwningPlayer());
+            itemStack.setItemMeta(meta);
         }
 
         // suspicious stew
-        else if(this instanceof SuspiciousStew) {
+        else if (this instanceof SuspiciousStew) {
             SuspiciousStew item = (SuspiciousStew) this;
             SuspiciousStewMeta meta = (SuspiciousStewMeta) itemMeta;
             item.getCustomEffects().forEach(effect -> meta.addCustomEffect(effect, false));
+            itemStack.setItemMeta(meta);
         }
 
         // tropical fish bucket
-        else if(this instanceof TropicalFishBucket) {
+        else if (this instanceof TropicalFishBucket) {
             TropicalFishBucket item = (TropicalFishBucket) this;
             TropicalFishBucketMeta meta = (TropicalFishBucketMeta) itemMeta;
             meta.setPattern(item.getPattern());
             meta.setPatternColor(item.getPatternColor());
             meta.setBodyColor(item.getBodyColor());
+            itemStack.setItemMeta(meta);
         }
 
-        itemMeta.addItemFlags(itemFlags.toArray(ItemFlag[]::new));
-        itemStack.setItemMeta(itemMeta);
-        itemStack.addEnchantments(enchantments);
+        itemStack.addUnsafeEnchantments(enchantments);
 
         return itemStack;
     }
